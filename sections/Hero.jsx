@@ -40,7 +40,7 @@ const Hero = () => (
             src="/cover.png"
             alt="hero_cover"
             fill
-            className="object-cover rounded-tl-[140px] rounded-tr-[100px]"
+            className="object-cover"
           />
         </div>
 
