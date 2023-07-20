@@ -1,6 +1,13 @@
-const StartSteps = () => (
-  <div>
-    start steps
+import styles from "@/app";
+
+const StartSteps = ({ number, text }) => (
+  <div className="flex justify-center items-center flex-row">
+    <div className="flex justify-center items-center w-[70px] h-[70px] rounded-[24px] bg-[#323F5D]">
+      <p className="font-bold text-[20px] text-white">{number}</p>
+    </div>
+    <p className="flex-1 ml-[30px] font-normal text-[18px] text-[#B0B0B0] sm:leadind-7 leading-5">
+      {text}
+    </p>
   </div>
 );
 

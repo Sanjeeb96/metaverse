@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ExploreCard, TitleText, TypingText } from "@/components";
 import styles from "@/app";
 import { staggerContainer } from "@/utils/motion";
+import { exploreWorlds } from "@/constantdata";
 
 const Explore = () => {
   const [active, setActive] = useState("world-2");
@@ -29,6 +30,18 @@ const Explore = () => {
           }
           textStyles="text-center"
         />
+
+        <div className="explore__cardmain">
+          {exploreWorlds.map((world, index) => (
+            <ExploreCard
+              key={world.id}
+              {...world}
+              index={index}
+              active={active}
+              handleClick={setActive}
+            />
+          ))}
+        </div>
       </motion.div>
     </section>
   );
